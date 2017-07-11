@@ -48,7 +48,7 @@ make install
     1. PHP版本需要在5.6以上版本。
     2. 在PHP的include路径下应该包含头文件ext/sockets/php_sockets.h。
     3. sockets扩展在zan之前加载(php.ini中的引入加载顺序)，以确保能引用符号表信息。
-5.  若执行configure时报错Enable openssl support, require openssl library，请重新安装openssl库并保证能链接正确。
+5.  若执行configure时报错Enable openssl support, require openssl library，请重新安装openssl库(和openssl-devel)并保证能链接正确。
     1. 重新安装openssl库。
     2. 添加openssl库路径供链接器找lib，如将```-L/usr/local/opt/openssl/lib```补充到config.m4中的LDFLAGS。
     3. 添加openssl库依赖头文件路径，如将```-I/usr/local/opt/openssl/include```添加到config.m4中的CPPFLAGS。
